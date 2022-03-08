@@ -1,14 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Auth</title>
-    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
-
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <script src="/js/axios.min.js"></script>
+    <script src="/js/vue.min.js"></script>
 </head>
+
 <body>
-    <input type="text" class="btn btn-succes">
+    <div class="container" id="app">
+        <div width="500">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                    placeholder="Enter email" v-model="email">
+            </div>
+            <div class="form-group">
+                <label for="Password1">Password</label>
+                <input type="password" class="form-control" id="Password1" placeholder="Password" v-model="password">
+            </div>
+            <div class="form-group">
+                <label for="Password1">Password confirm</label>
+                <input type="password" class="form-control" id="Password1" placeholder="Password confirm" v-model="passwordConfirm">
+            </div>
+            <button class="btn btn-primary" @click="registration">registration</button>
+            <button class="btn btn-primary" @click="auth">auth</button>
+            <div :style="messageStyle">{{message}}</div>
+        </div>
+    </div>
+    <script src="/js/main.js"></script>
 </body>
+
 </html>
