@@ -24,9 +24,9 @@ class AuthService{
                 email
             }
         })
-        const {id} = candidate;
         if(!candidate)
             throw ApiError.BadRequest("Пользователь с данным email не найден")
+        const {id} = candidate;
         if (!await bcrypt.compare(password,candidate.password))
             throw ApiError.BadRequest("не верный пароль")
         return {status:"ok",id,email,message:"успешно авторизован"}
