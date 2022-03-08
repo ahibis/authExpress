@@ -1,0 +1,19 @@
+
+POST http://127.0.0.1:3000/auth
+content-type: application/json
+
+{
+    "email":"nikitonvg1@list.ru",
+    "password":"12345"
+}
+
+###
+
+POST http://127.0.0.1:3000/registration
+content-type: application/json
+
+{
+    "email":"nikitonvg1@list.ru",
+    "password":"12345",
+    "passwordConfirm":"12345"
+}
