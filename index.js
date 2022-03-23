@@ -20,10 +20,10 @@ app.use(express.static("public"))
 app.post("/registration", async (req,res,next)=>{
     try{
         const {email, password, passwordConfirm} = req.body;
-        const data = await registraion(email,password,passwordConfirm)
-        req.session.userId = data.id;
+        const Data = await registraion(email,password,passwordConfirm)
+        req.session.userId = Data.id;
         req.session.email = email;
-        res.json(data)
+        res.json(Data)
     }catch(e){
         next(e)
     }
