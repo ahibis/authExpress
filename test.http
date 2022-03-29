@@ -2,7 +2,7 @@ POST http://127.0.0.1:3000/auth
 content-type: application/json
 
 {
-    "email":"nikitonvg1@list.ru",
+    "email":"test1@list.ru",
     "password":"12345"
 }
 
@@ -11,9 +11,14 @@ POST http://127.0.0.1:3000/registration
 content-type: application/json
 
 {
-    "email":"nikitonvg1@list.ru",
+    "email":"newUser@gmail.com",
     "password":"12345",
     "passwordConfirm":"12345"
 }
 ###
-GET http://127.0.0.1:3000/info
+GET http://127.0.0.1:3000/getUserByToken
+content-type: application/json
+
+{
+    "token":"$2a$10$6RSwaBRjyYmL7LiscK4MQu9ZbAxGzei0mI5x6IymI49NI42.goc/2"
+}

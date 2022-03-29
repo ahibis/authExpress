@@ -1,4 +1,3 @@
-console.log("lol")
 const vm = new Vue({
     el:"#app",
     data:{
